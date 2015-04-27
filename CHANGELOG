@@ -1,0 +1,119 @@
+CHANGELOG -
+
+1/19/15 - Started Assignment 1.01
+		* Initialized project, created files, tested make
+		* added room.c, room.h and played with structs
+		* added dungeon.c, dungeon.h to handle dungeon init
+		* made rooms be drawn on the map
+		* made rooms follow restrictions
+		* added djikstra to connect rooms
+1/20/15 - added a fail threshold to creating rooms
+		* there can be a range of room numbers
+1/21/15 - fixed error when incrementing rooms
+1/22/15 - fixed bug where some rooms weren't connected
+		* made rooms >3 hasudorff distances
+		* refactored the coordinate system to use consistent and corret naming conventions
+		* altered pathfinding for room connections to look more interesting
+		* finished assignment 1.01
+1/23/15 - began refactoring to make things more 'c'-like
+1/26/15 - went from 300,000 bytes of allocatted memory to 0 :)
+		* finished making things more 'c'-like
+1/29/15 - Began work on file output
+		* created directory, and file
+		* wrote save_dungeon
+		* wrote load_dungeon
+		* added flags for --save & --load
+1/30/15 - fixed file path bug
+		* allowed both save and load flags to be used
+		* added accounting for endianness
+2/2/15  - added player and npc structs
+		* they don't do anything yet, but meh.
+2/6/15 	- added bit field.
+		* initialized monsters.
+2/7/15	- added monsters flag
+		* added monsters to dungeon based on flag
+2/8/15	- started move_npcs function
+		* added priority queue data structure
+		* added much frustration...
+		* dijkstra's is mostly working.
+2/8/15	- refactored code
+		* added node array
+		* removed priority queue
+		* made monsters leave a trail
+		* fixed path finding :)
+		* it works finally
+2/14/15 - fixed valgrind errors.
+2/16/15 - added smart, telpathic, and smart/telepathic monsters
+		* changed flag to nummon
+		* refactored some code in move_npcs, twas getting large
+		* preparing to add priority queue for npcs
+		* fixed loading and saving
+2/17/15 - added turns for npcs
+		* added collision checking
+2/18/15 - npcs die when they collide
+		* players die and kill npcs
+2/21/15 - npcs get deleted when they die
+		* the array of npcs shrinks when one dies
+		* fixed player collision
+		* end on player death
+2/23/15 - added ncurses support
+		* fixed seg fault occurring randomly
+		* optimized node array
+		* made pc movement better
+		* added color :) soo shiny
+		* stopped monsters from generating on top of each other
+2/24/15 - fixed pestering seg fault
+		* cleaned up memory leak from early removal of npc's
+		* packaged for submission
+2/26/15 - added controls for assignment 1.05
+		* changed npc collision detection to use constant lookup
+		* changed npc removal
+		* finished look mode.
+		* finished player movement.
+		* added save as quit button
+2/27/15 - added stairs
+		* cleaned up memory
+		* cleaned up comments
+3/10/15 - started working on file loading
+		* added saving of stairs
+3/11/15 - made game load file every time
+		* removed --load and --save flags
+		* set default monsters to 100
+		* makes a new dungeon if save file is corrupt
+3/12/15 - added npc saving and loading
+		* fixed memory errors with new loading
+		* gave npcs a char attribute
+		* yay saving and loading is done
+3/25/15 - changed main.c to main. cpp
+		* added file reader class
+3/26/15 - made file reader print the correct file
+		* added roll class to parse roll
+3/27/15 - made file reader parse values
+		* added monster class
+3/29/15 - finished monster class
+		* made file reader create monsters
+		* pointed to correct file directory
+4/01/15 - ported game to PS4
+		* implemented DOOM
+		* added Dwarf Fortress library
+4/02/15 - Stared item parsing
+		* added item_template class
+		* finished parsing algorithm
+4/06/15 - added item class
+        * added constructor from item_template
+4/07/15 - refactored npc's
+		* added monster factory method
+		* added new fields to npc's
+4/08/15 - refactored item class to be a struct
+		* connected item_template with new struct
+		* added item* to c_nodes for storage
+4/09/15 - generated items on creation and loading
+		* added new monster factors to display
+		* deallocated monsters when finished
+4/19/15 - fixed bug which broke stairs
+		* added carrying and equipping items
+4/20/15 - changed gui to allow for items
+		* incorporated items in damage calculation
+		* changed combat to new mechanics
+		* changed monster combat to new mechanics
+		* added indication of damage on screen
